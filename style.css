@@ -1,34 +1,31 @@
-﻿* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Microsoft YaHei", sans-serif;
 }
 
-
 body {
   background: #f6f6f6;
-  color: #333;
+  color: #222;
+  line-height: 1.7;
 }
-
 
 .container {
   width: 92%;
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
-
-/* 导航 */
+/* 导航栏 */
 nav {
-  background: #1a1a1a;
+  background: #111;
   color: white;
-  padding: 16px 0;
+  padding: 18px 0;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
-
 
 nav .container {
   display: flex;
@@ -36,31 +33,32 @@ nav .container {
   align-items: center;
 }
 
-
 .logo {
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: bold;
 }
-
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 28px;
 }
-
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-size: 16px;
+  transition: 0.3s;
 }
 
+.nav-links a:hover {
+  color: #ff4757;
+}
 
-/* 横幅 */
+/* 首页横幅 */
 .banner {
   height: 420px;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-    url("https://picsum.photos/id/1048/1200/600");
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url("https://images.unsplash.com/photo-1542291026-7eec264c27ff");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -70,68 +68,108 @@ nav .container {
   text-align: center;
 }
 
-
 .banner h1 {
-  font-size: 38px;
+  font-size: 42px;
   margin-bottom: 12px;
 }
 
-
 .banner p {
   font-size: 18px;
+  opacity: 0.9;
 }
 
+/* 热门球鞋板块 */
+.hot-shoes {
+  padding: 70px 0;
+  text-align: center;
+}
 
-/* 球鞋展示 */
-.shoes {
+.hot-shoes h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 球鞋文化板块 */
+.culture {
+  background: #111;
+  color: white;
   padding: 60px 0;
   text-align: center;
 }
 
-
-.shoes h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
+.culture h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+.culture-text {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 16px;
+  opacity: 0.9;
 }
 
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-
-/* 关于 */
+/* 关于我们 */
 .about {
-  background: white;
-  padding: 50px 0;
+  padding: 70px 0;
   text-align: center;
+  background: white;
 }
 
+.about h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
 
 .about p {
   max-width: 700px;
-  margin: 16px auto 0;
-  line-height: 1.7;
+  margin: 10px auto;
   font-size: 16px;
+  color: #444;
 }
 
-
-/* 底部 */
+/* 页脚 */
 footer {
-  background: #1a1a1a;
+  background: #111;
   color: white;
   text-align: center;
-  padding: 24px 0;
-  margin-top: 20px;
+  padding: 25px 0;
+  font-size: 15px;
 }
